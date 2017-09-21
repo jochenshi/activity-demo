@@ -4,8 +4,12 @@
       <mt-button slot="left">asd</mt-button>
       <mt-button slot="right" @click="handleClick">发布</mt-button>
     </mt-header>
-    <div class="body_content"></div>
-    <div class="bottom_foot"></div>
+    <div class="home_content"></div>
+    <mt-tabbar class="modified_tabbar" >
+      <mt-tab-item>首页</mt-tab-item>
+      <mt-tab-item>消息</mt-tab-item>
+      <mt-tab-item>我</mt-tab-item>
+    </mt-tabbar>
   </div>
 </template>
 <script>
