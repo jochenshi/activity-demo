@@ -4,7 +4,9 @@
       <mt-button slot="left">asd</mt-button>
       <mt-button slot="right" @click="handleClick">发布</mt-button>
     </mt-header>
-    <div class="home_content"></div>
+    <div class="home_content">
+      <div class=""></div>
+    </div>
     <mt-tabbar class="modified_tabbar" >
       <mt-tab-item>首页</mt-tab-item>
       <mt-tab-item>消息</mt-tab-item>
