@@ -1,4 +1,5 @@
 <template>
+  <!--这是走马灯内部的切换元素,在点击切换的时候切换的是这部分内容-->
   <div
     :class = "{
       'is_active': active,
