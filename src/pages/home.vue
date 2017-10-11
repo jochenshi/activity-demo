@@ -5,6 +5,9 @@
       <mt-button slot="right" @click="handleClick">发布</mt-button>
     </mt-header>
     <div class="home_content">
+      <s-carousel>
+        <span>this is test text</span>
+      </s-carousel>
       <div class=""></div>
     </div>
     <mt-tabbar class="modified_tabbar" >
@@ -15,6 +18,7 @@
   </div>
 </template>
 <script>
+  import SCarousel from '../components/scarousel/scarousel.vue'
   export default {
     name: 'home',
     data () {
@@ -24,7 +28,8 @@
       handleClick () {
         alert(111)
       }
-    }
+    },
+    components: {SCarousel}
   }
 </script>
 <style lang="stylus" src="./home.styl"></style>
