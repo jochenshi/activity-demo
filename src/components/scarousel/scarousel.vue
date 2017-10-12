@@ -17,6 +17,7 @@
         <button
           v-if="arrow !== 'never'"
           v-show="arrow === 'always' || hover"
+          @click="next"
           class="s_carousel_arrow s_carousel_arrow_right">
           <i class="s_icon_right"></i>
         </button>
@@ -117,10 +118,15 @@
         })
       },
       prev () {
-        this.setActiveItem(this.activeIndex + 1);
+        this.setActiveItem(this.activeIndex - 1);
       },
       next () {
-        this.setActiveItem(this.activeIndex - 1);
+        this.setActiveItem(this.activeIndex + 1);
+      }
+    },
+    created () {
+      this.handleaa = () => {
+        console.log(111)
       }
     },
     mounted () {

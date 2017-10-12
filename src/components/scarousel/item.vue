@@ -33,7 +33,7 @@
         translate: 0
       }
     },
-    methosd: {
+    methods: {
       // 根据此时所处的不同的位置给各个item设置合适的偏移位置
       processIndex (index, activeIndex, length) {
         if (activeIndex === 0 && index === length - 1) {
