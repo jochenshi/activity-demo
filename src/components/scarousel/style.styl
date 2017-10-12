@@ -22,3 +22,45 @@
     }
   }
 }
+.s_carousel_indicators{
+  padding 0
+  .s_carousel_indicator{
+    list-style none
+    display inline-block
+    cursor pointer
+    padding 12px 4px
+    background-color transparent
+    .s_carousel_button{
+      cursor pointer
+      width 30px
+      height 2px
+      margin 0
+      padding 0
+      border none
+      outline none
+    }
+  }
+}
+.s_carousel_item{
+  position absolute
+  display inline-block
+  top 0
+  left 0
+  width 100%
+  height 100%
+  overflow hidden
+  z-index 0
+  &.is-in-stage{
+    z-index 1
+    cursor pointer
+  }
+  &.is-active{
+    z-index 2
+  }
+  &.is_animating{
+    transition transform .4s ease-in-out
+  }
+  .s_carousel_mask{
+
+  }
+}

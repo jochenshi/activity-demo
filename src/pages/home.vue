@@ -6,7 +6,9 @@
     </mt-header>
     <div class="home_content">
       <s-carousel>
-        <span>this is test text</span>
+        <s-carousel-item v-for="item in 4" :key="item">
+          <span>{{item}}</span>
+        </s-carousel-item>
       </s-carousel>
       <div class=""></div>
     </div>
@@ -19,6 +21,7 @@
 </template>
 <script>
   import SCarousel from '../components/scarousel/scarousel.vue'
+  import SCarouselItem from '../components/scarousel/item.vue'
   export default {
     name: 'home',
     data () {
@@ -29,7 +32,7 @@
         alert(111)
       }
     },
-    components: {SCarousel}
+    components: {SCarousel, SCarouselItem}
   }
 </script>
 <style lang="stylus" src="./home.styl"></style>

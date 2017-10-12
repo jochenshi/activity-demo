@@ -26,8 +26,10 @@
     </div>
     <!--the switch and indicator area in the bottom-->
     <ul class="s_carousel_indicators">
-      <li v-for="(item, index) in items">
-        <button>
+      <li
+        class="s_carousel_indicator"
+        v-for="(item, index) in items">
+        <button class="s_carousel_button">
           <span></span>
         </button>
       </li>
@@ -38,6 +40,11 @@
   export default {
     name: 'SCarousel',
     props: {
+      /*默认情况下显示的Carousel*/
+      initialIndex: {
+        type: Number,
+        default: 0
+      },
       indicator: {
         type: Boolean,
         default: true
@@ -60,7 +67,15 @@
       }
     },
     watch: {
-      activeIndex (val, oldVal) {}
+      activeIndex (val, oldVal) {
+        this.resetItemPosition(oldVal);
+        this.$emit('change', val, oldVal)
+      },
+      items (val) {
+        if (val.length > 0) {
+          this.setActiveItem(this.initialIndex)
+        }
+      }
     },
     methods: {
       handleMouseEnter () {
@@ -93,12 +108,23 @@
           this.activeIndex = index
         }
       },
+      updateItems () {
+        this.items = this.$children.filter(child => child.$options.name === 'SCarouselItem');
+      },
+      resetItemPosition (oldIndex) {
+        this.items.forEach((item, index) => {
+          item.translateItem(index, this.activeIndex, oldIndex)
+        })
+      },
       prev () {
         this.setActiveItem(this.activeIndex + 1);
       },
       next () {
         this.setActiveItem(this.activeIndex - 1);
       }
+    },
+    mounted () {
+      this.updateItems();
     }
   }
 </script>
