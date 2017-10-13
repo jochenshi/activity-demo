@@ -1,7 +1,10 @@
 .s_carousel{
+  position relative
+  overflow-x hidden
   .s_carousel_container{
     position relative
-    height 300px
+    height 180px //change for the mobile end
+    overflow hidden
     .s_carousel_arrow{
       position absolute
       width 36px
@@ -12,8 +15,12 @@
       color #fff
       top 50%
       z-index 10
+      cursor pointer
       transform translateY(-50%)
-      background-color rgba(31,45,61,.11)
+      background-color rgba(31,45,61,.21)
+      i{
+        font-size 24px
+      }
     }
     & .s_carousel_arrow_right{
       right 16px
@@ -24,7 +31,20 @@
   }
 }
 .s_carousel_indicators{
+  width 100%
   padding 0
+  margin 0
+  position absolute
+  bottom 0
+  left 50%
+  transform translateX(-50%)
+  z-index 2
+  &.s_carousel_indicator_outside{
+    bottom 26px
+    position static
+    text-align center
+    transform none
+  }
   .s_carousel_indicator{
     list-style none
     display inline-block
@@ -32,13 +52,22 @@
     padding 12px 4px
     background-color transparent
     .s_carousel_button{
+      opacity .42
       cursor pointer
+      display block
       width 30px
       height 2px
       margin 0
       padding 0
+      background-color #b4bccc
       border none
       outline none
+    }
+    &.is_active > .s_carousel_button{
+      opacity 1
+    }
+    &:hover .s_carousel_button{
+      opacity .82
     }
   }
 }
