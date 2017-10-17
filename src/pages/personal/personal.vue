@@ -1,12 +1,20 @@
 <template>
-  <div>
+  <div class="personal_page">
     <mt-header fixed title="我">
       <i class="iconfont s-set" slot="right"></i>
     </mt-header>
     <div class="personal_content normal_content">
-      <div class="self_info"></div>
+      <div class="self_info">
+        <div class="head_pic"></div>
+        <div class="text_area"></div>
+        <span class="label">个人资料</span>
+        <i class="iconfont s-more"></i>
+      </div>
       <ul class="other_info">
-        <li></li>
+        <li v-for="(item, index) in titles" :key="index">
+          {{item.text}}
+          <i class="iconfont s-more" v-if="item.value !== 'inviteCode'"></i>
+        </li>
       </ul>
     </div>
   </div>
