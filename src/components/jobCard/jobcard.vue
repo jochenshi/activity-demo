@@ -45,13 +45,15 @@
         return this.info.start_time + '-' + this.info.end_time;
       },
       confirmed_info () {
-        let total = 0;
-        let confirmed = 0;
-        this.info.occupations.forEach((val) => {
-          total += val.total_num;
-          confirmed += val.signed_num;
-        })
-        return confirmed + '/' + total;
+        if (this.info.occupations) {
+          let total = 0;
+          let confirmed = 0;
+          this.info.occupations.forEach((val) => {
+            total += val.total_num;
+            confirmed += val.signed_num;
+          })
+          return confirmed + '/' + total;
+        }
       }
     },
     mounted () {
