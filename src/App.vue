@@ -27,6 +27,10 @@ html, body{
 .normal_content{
   padding: 40px 0 50px 0;
 }
+.no_bottom{
+  padding-top: 40px;
+  box-sizing: border-box;
+}
 ul{
   list-style: none;
   padding: 0;

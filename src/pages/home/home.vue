@@ -24,7 +24,11 @@
         <div class="list_content">
           <section v-show="currentTitle === 'now' && !showLoading"
                    class="going_activity">
-            <s-job-card v-for="item in 10" :key="item" :info="testData" :style="{'display':'inline-block','width':'100%','border':'1px solid #e3e3e3'}"></s-job-card>
+            <s-job-card v-for="item in 10"
+                        @click.native="clickCard"
+                        :key="item"
+                        :info="testData"
+                        :style="{'display':'inline-block','width':'100%','border':'1px solid #e3e3e3'}"></s-job-card>
           </section>
           <section v-show="currentTitle === 'history' && !showLoading"
                    class="history_activity">
@@ -58,6 +62,9 @@
     methods: {
       handleClick () {
         alert(111)
+      },
+      clickCard () {
+        this.$router.push('detailActivity');
       },
       handleTitleClick (item) {
         this.currentTitle = item.value;

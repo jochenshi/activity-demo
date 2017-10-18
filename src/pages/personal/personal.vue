@@ -6,7 +6,15 @@
     <div class="personal_content normal_content">
       <div class="self_info">
         <div class="head_pic"></div>
-        <div class="text_area"></div>
+        <div class="text_area">
+          <ul>
+            <li class="nickname">nickname</li>
+            <li class="star_level">
+              <span class="star"></span>
+              <span class="text_label">金牌老板</span>
+            </li>
+          </ul>
+        </div>
         <span class="label">个人资料</span>
         <i class="iconfont s-more"></i>
       </div>

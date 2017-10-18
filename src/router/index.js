@@ -6,6 +6,7 @@ import Index from '../pages/index.vue'
 import Home from '../pages/home/home.vue'
 import Message from '../pages/message/message.vue'
 import Personal from '../pages/personal/personal.vue'
+import DetailActivity from '../pages/activity/detailActivity.vue'
 
 Vue.use(Router)
 
@@ -37,11 +38,11 @@ const router = new Router({
         }
       ]
     },
-    /*{
-      path: '/login',
-      name: 'Login',
-      component: ''
-    },*/
+    {
+      path: '/detailActivity',
+      name: 'detailActivity',
+      component: DetailActivity
+    },
     {
       path: '/home',
       name: 'Home',
