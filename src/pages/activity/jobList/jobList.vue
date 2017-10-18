@@ -8,7 +8,7 @@
       )
     </header>
     <div class="list_content">
-      <list-card v-for="(item, index) in testData" :index="index + 1" :info="item"></list-card>
+      <list-card v-for="(item, index) in testData" :index="index + 1" :info="item" :key="index"></list-card>
       <!--<ul class="list_wrapper">
         <li v-for="item in 6"
             class="list_menu"

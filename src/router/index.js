@@ -14,7 +14,6 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
       component: Index,
       children: [
         {
