@@ -1,7 +1,8 @@
 <template>
   <div class="list_card">
-    <div class="menu_header">
-      <i class="iconfont s-arrowright" @click="handleVisible">职位{{index}}</i>
+    <div class="menu_header" @click="handleVisible">
+      <i class="iconfont s-arrowright"></i>
+      <span class="job_title">职位{{index}}</span>
       <div class="job_num">
         <span>singer</span>
         (
@@ -11,7 +12,7 @@
         )
       </div>
     </div>
-    <transition>
+    <s-fold-transition>
       <ul class="sub_list" v-if="info" v-show="showChild">
         <li v-for="(item, index) in info" :key="index" class="sub_list_info">
           <div class="head_pic"></div>
@@ -23,10 +24,11 @@
         </li>
       </ul>
       <ul v-if="!info">暂无数据</ul>
-    </transition>
+    </s-fold-transition>
   </div>
 </template>
 <script>
+  import SFoldTransition from '../../../../common/transition/foldTransition'
   export default {
     name: 'ListCard',
     data () {
@@ -39,7 +41,8 @@
         this.showChild = !this.showChild;
       }
     },
-    props: ['info', 'index']
+    props: ['info', 'index'],
+    components: {SFoldTransition}
   }
 </script>
 <style lang="stylus" src="./style.styl" scoped></style>

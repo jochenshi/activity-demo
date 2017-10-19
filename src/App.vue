@@ -26,6 +26,7 @@ html, body{
 }
 .normal_content{
   padding: 40px 0 50px 0;
+  box-sizing: border-box;
 }
 .no_bottom{
   padding-top: 40px;
@@ -35,5 +36,12 @@ ul{
   list-style: none;
   padding: 0;
   margin: 0;
+}
+.normal_bottom{
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 </style>

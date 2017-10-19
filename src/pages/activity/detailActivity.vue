@@ -4,7 +4,7 @@
       <mt-button icon="back" slot="left" @click="goBack"></mt-button>
       <i class="iconfont s-share" slot="right"></i>
     </mt-header>
-    <div class="detail_body no_bottom">
+    <div class="detail_body normal_content">
       <activity-header></activity-header>
       <div class="filter_area">
         <span>已有100名活友报名活动，等待您的筛选</span>

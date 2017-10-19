@@ -23,7 +23,8 @@ const router = new Router({
         {
           path: 'home',
           name: 'home',
-          component: Home
+          component: Home,
+          meta: { keepAlive: true }
         },
         {
           path: 'message',
@@ -64,7 +65,14 @@ const router = new Router({
       name: 'personal',
       component: ''
     }*/
-  ]
+  ],
+  mode: 'history',
+  scrollBehavior (to, from, savedPosition) {
+    console.log(to.meta)
+    /*if (to.meta.keepAlive) {
+      document.getElementsByClassName('home_content')[0].scrollTop = 200
+    }*/
+  }
 })
 /*router.beforeEach((to, from, next) => {
   console.log(router.app)

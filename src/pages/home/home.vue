@@ -38,12 +38,16 @@
         </div>
       </div>
     </div>
+    <alert-card>
+      <div slot="content">test content</div>
+    </alert-card>
   </div>
 </template>
 <script>
   import SCarousel from '../../components/scarousel/scarousel.vue'
   import SCarouselItem from '../../components/scarousel/item.vue'
   import SJobCard from '../../components/jobCard/jobcard.vue'
+  import AlertCard from '../../components/alert/alertBox.vue'
   import * as localData from '../../service/tempData/tempData'
   export default {
     name: 'home',
@@ -79,12 +83,19 @@
       }
     },
     mounted () {
-      setTimeout(() => {
+      this.testData = localData.singleJob;
+      this.showLoading = false;
+      /*setTimeout(() => {
         this.testData = localData.singleJob;
         this.showLoading = false;
-      }, 3000)
+      }, 3000)*/
     },
-    components: {SCarousel, SCarouselItem, SJobCard}
+    components: {
+      SCarousel,
+      SCarouselItem,
+      SJobCard,
+      AlertCard
+    }
   }
 </script>
 <style lang="stylus" src="./home.styl"></style>

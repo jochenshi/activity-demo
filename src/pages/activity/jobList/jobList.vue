@@ -39,6 +39,10 @@
         </li>
       </ul>-->
     </div>
+    <div class="bottom normal_bottom">
+      <div class="cancel">取消本次活动</div>
+      <div class="confirm">确认活动完成并结算</div>
+    </div>
   </div>
 </template>
 <script>
