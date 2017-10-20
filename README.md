@@ -1,6 +1,7 @@
 # activity-demo
 
 > a activity project based on Vue
+> All rights reserved by author jochenshi @jochenshi@gmail.com
 
 ## Build Setup
 
