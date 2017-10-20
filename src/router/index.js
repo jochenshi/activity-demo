@@ -7,6 +7,7 @@ import Home from '../pages/home/home.vue'
 import Message from '../pages/message/message.vue'
 import Personal from '../pages/personal/personal.vue'
 import DetailActivity from '../pages/activity/detailActivity.vue'
+import AddActivity from '../pages/addActivity/addActivity.vue'
 
 Vue.use(Router)
 
@@ -42,6 +43,11 @@ const router = new Router({
       path: '/detailActivity',
       name: 'detailActivity',
       component: DetailActivity
+    },
+    {
+      path: '/addActivity',
+      name: 'addActivity',
+      component: AddActivity
     },
     {
       path: '/home',

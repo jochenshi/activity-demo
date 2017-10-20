@@ -1,7 +1,7 @@
 <template>
   <div class="list_card">
     <div class="menu_header" @click="handleVisible">
-      <i class="iconfont s-arrowright"></i>
+      <i class="iconfont s-arrowright" :class="{'clicked': isClicked}"></i>
       <span class="job_title">职位{{index}}</span>
       <div class="job_num">
         <span>singer</span>
@@ -33,12 +33,14 @@
     name: 'ListCard',
     data () {
       return {
-        showChild: false
+        showChild: false,
+        isClicked: false
       }
     },
     methods: {
       handleVisible () {
         this.showChild = !this.showChild;
+        this.isClicked = !this.isClicked
       }
     },
     props: ['info', 'index'],

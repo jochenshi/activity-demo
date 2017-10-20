@@ -7,7 +7,6 @@
       <ul class="message_title">
         <li v-for="(item, index) in titles" :key="index">{{item.text}}<i class="iconfont s-more"></i></li>
       </ul>
-      <s-message-list></s-message-list>
     </div>
   </div>
 </template>

@@ -11,14 +11,47 @@
     z-index 2049
     background-color #ffffff
     border-radius 5px
+    .alert_header{
+      padding 10px
+      .header_title{
+        text-align center
+        font-size 16px
+        font-weight 700
+        color #333
+      }
+    }
     .alert_content{
       flex 1
-      padding 20px
+      padding 10px 20px 20px 20px
+      text-align center
     }
     .alert_bottom{
       text-align center
+      display flex
+      border 0
+      border-top 1px solid #e3e3e3
+      margin 0
+      padding 0
+      height 40px
+      line-height 40px
+      box-sizing border-box
       button{
-        width 100px
+        flex 1
+        line-height 24px
+        outline none
+        border 0
+        padding 0
+        margin 0
+        &.cancel{
+          background-color #fff
+          border-bottom-left-radius 5px
+          //border-top 1px solid #e3e3e3
+        }
+        &.confirm{
+          background-color #FD7878
+          border-bottom-right-radius 5px
+          //border-top 1px solid #fff
+        }
       }
     }
   }

@@ -38,9 +38,10 @@
         </div>
       </div>
     </div>
-    <alert-card>
+    <!--<alert-card>
+      <div slot="header">alert title</div>
       <div slot="content">test content</div>
-    </alert-card>
+    </alert-card>-->
   </div>
 </template>
 <script>
@@ -49,6 +50,7 @@
   import SJobCard from '../../components/jobCard/jobcard.vue'
   import AlertCard from '../../components/alert/alertBox.vue'
   import * as localData from '../../service/tempData/tempData'
+  //import SAlertBox from '../../components/alert/main'
   export default {
     name: 'home',
     data () {
@@ -65,7 +67,11 @@
     },
     methods: {
       handleClick () {
-        alert(111)
+        this.$router.push('addActivity');
+        /*SAlertBox({
+          message: 'Are you sure to close?',
+          afterClose: () => { console.log('test') }
+        })*/
       },
       clickCard () {
         this.$router.push('detailActivity');
