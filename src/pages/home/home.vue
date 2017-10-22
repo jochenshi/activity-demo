@@ -38,9 +38,9 @@
         </div>
       </div>
     </div>
-    <alert-card>
+    <!--<alert-card>
       <div slot="content">test content</div>
-    </alert-card>
+    </alert-card>-->
   </div>
 </template>
 <script>

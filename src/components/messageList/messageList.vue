@@ -19,10 +19,10 @@
   </div>
 </template>
 <script>
-  const testData = {
+  /*const testData = {
     headImg: '',
     name: ''
-  }
+  }*/
   export default {
     name: 'SMessageList',
     data () {
