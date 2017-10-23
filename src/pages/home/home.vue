@@ -41,7 +41,7 @@
     <!--<alert-card>
       <div slot="header">alert title</div>
       <div slot="content">test content</div>
-    </alert-card>
+    </alert-card>-->
   </div>
 </template>
 <script>

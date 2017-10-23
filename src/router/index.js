@@ -8,6 +8,7 @@ import Message from '../pages/message/message.vue'
 import Personal from '../pages/personal/personal.vue'
 import DetailActivity from '../pages/activity/detailActivity.vue'
 import AddActivity from '../pages/addActivity/addActivity.vue'
+import STreeTest from '../pages/test.vue'
 
 Vue.use(Router)
 
@@ -48,6 +49,11 @@ const router = new Router({
       path: '/addActivity',
       name: 'addActivity',
       component: AddActivity
+    },
+    {
+      path: '/tree',
+      name: 'tree',
+      component: STreeTest
     },
     {
       path: '/home',
